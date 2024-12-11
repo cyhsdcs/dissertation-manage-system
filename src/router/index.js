@@ -15,7 +15,7 @@ export default new Router({
             children:[
                 {
                     path: '/',
-                    component: resolve => require(['../components/page/Readme.vue'], resolve)
+                    component: resolve => require(['../components/page/Blank.vue'], resolve)
                 },
                 {
                     path: '/upload',
@@ -36,6 +36,22 @@ export default new Router({
                 {
                     path: '/success',
                     component: resolve => require(['../components/page/Success.vue'], resolve)
+                },
+                {
+                    path: '/assignStudents',
+                    component: resolve => require(['../components/page/AssignStudents.vue'], resolve)
+                },
+                {
+                    path: '/studentList',
+                    component: resolve => require(['../components/page/studentList.vue'], resolve)
+                },
+                {
+                    path: '/grade',
+                    component: resolve => require(['../components/page/Grade.vue'], resolve)
+                },
+                {
+                    path: '/reportSubmit',
+                    component: resolve => require(['../components/page/reportSubmit.vue'], resolve)
                 }
             ]
         },

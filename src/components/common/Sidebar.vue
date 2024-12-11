@@ -31,6 +31,11 @@
                     },
                     {
                         icon: 'el-icon-setting',
+                        index: 'assignStudents',
+                        title: 'Assign students'
+                    },
+                    {
+                        icon: 'el-icon-setting',
                         index: 'userCenter',
                         title: '设置',
                         subs: [
@@ -54,6 +59,80 @@
         computed:{
             onRoutes(){
                 return this.$route.path.replace('/','');
+            }
+        },
+        created() {
+            this.getUserRole();
+        },
+        methods: {
+            getUserRole() {
+                const self = this;	
+				let username = sessionStorage.getItem('ms_username');
+                console.log('account',username);
+                self.$http.post('/api/user/getUser',{name: username}).then((response) =>{
+					console.log('response',response);
+					let result = response.data[0];
+                    console.log('result',result);
+                    console.log(typeof result);
+					let temp = result.role;
+                    
+                    switch(temp) {
+                        case 'teacher':
+                            this.items = [
+                                {
+                                    icon: 'el-icon-setting',
+                                    index: 'studentList',
+                                    title: 'Student List'
+                                },
+                                {
+                                    icon: 'el-icon-setting',
+                                    index: 'grade',
+                                    title: 'Grade'
+                                },
+                                {
+                                    icon: 'el-icon-setting',
+                                    index: 'userCenter',
+                                    title: 'Configure',
+                                    subs: [
+                                        {
+                                            index: 'modifyPassword',
+                                            title: 'Modify Password'
+                                        }
+                                    ]
+                                }
+                            ]
+                            break;
+                        case 'student':
+                        this.items = [
+                                {
+                                    icon: 'el-icon-setting',
+                                    index: 'reportSubmit',
+                                    title: 'Submit Report'
+                                },
+                                {
+                                    icon: 'el-icon-setting',
+                                    index: 'Upload',
+                                    title: 'temp'
+                                },
+                                {
+                                    icon: 'el-icon-setting',
+                                    index: 'userCenter',
+                                    title: 'Configure',
+                                    subs: [
+                                        {
+                                            index: 'modifyPassword',
+                                            title: 'Modify Password'
+                                        }
+                                    ]
+                                }
+                            ]
+                            break;
+                        case 'admin':
+                            break;
+                    }
+				}).then(function(error) {
+					console.log(error);
+				})
             }
         }
     }

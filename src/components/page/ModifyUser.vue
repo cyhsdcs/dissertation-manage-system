@@ -78,11 +78,7 @@
 				form: {
 					name: '',
 					account: '',					
-					email: '',
-					phone: '',
-					card: '',
-					birth: '',
-					sex: ''
+					role: ''
 				},
 				rules: {
                     name: [
@@ -118,11 +114,7 @@
 					let result = response.data[0];
 					self.form.name = result.username;
 					self.form.account = result.account;
-					self.form.email = result.email;
-					self.form.phone = result.phone;
-					self.form.card = result.card;
-					self.form.birth = new Date(result.birth);
-					self.form.sex = result.sex;
+					self.form.role = result.role;
 					sessionStorage.setItem('ms_userId', result.id);
 				}).then(function(error) {
 					console.log(error);

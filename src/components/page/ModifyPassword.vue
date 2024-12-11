@@ -2,23 +2,31 @@
 	<div>
 		<div class="crumbs">
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-edit"></i> 个人中心</el-breadcrumb-item>
-                <el-breadcrumb-item>修改密码</el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-edit"></i> Modify Password</el-breadcrumb-item>
             </el-breadcrumb>
 		</div>
 		<div class="userContent">
 			<el-form ref="form" :model="form" :rules="rules" label-width="80px">
-				<el-form-item prop="pass" label="密码">
-					<el-input v-model="form.pass" type="password" placeholder="请输入密码"></el-input>
+				<el-form-item prop="pass" label="Password">
+					<el-input v-model="form.pass" type="password" placeholder="Please enter password"></el-input>
 				</el-form-item>
-				<el-form-item prop="checkPass" label="确认密码">
-					<el-input v-model="form.checkPass" type="password" placeholder="请再次输入密码"></el-input>
+				<el-form-item prop="checkPass" label="Confirm Password">
+					<el-input v-model="form.checkPass" type="password" placeholder="Please enter password again"></el-input>
 				</el-form-item>
 				<el-form-item>
-					<el-button type="primary" @click="onSubmit('form')">确定</el-button>
-					<el-button @click="onCancle()">取消</el-button>
+					<el-button type="primary" @click="visible = true">Confirm</el-button>
+					<el-button @click="onCancle()">Cancel</el-button>
 				</el-form-item>
 			</el-form>
+		</div>
+		<div>
+			<el-dialog title="Confirm" :visible.sync="visible" width="30%">
+				<span>Are you sure to modify the password?</span>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="visible = false">Cancel</el-button>
+					<el-button type="primary" @click="onSubmit('form')">Confirm</el-button>
+				</span>
+			</el-dialog>
 		</div>
 	</div>
 </template>
@@ -28,7 +36,7 @@
 		data() {
 			var validatePass = (rule, value, callback) => {
 				if(value === '') {
-					callback(new Error('请输入密码'));
+					callback(new Error('Please enter password'));
 				} else {
 					if(this.form.checkPass !== '') {
 						this.$refs.form.validateField('checkPass');
@@ -38,9 +46,9 @@
 			};
 			var validatePass2 = (rule, value, callback) => {
 				if(value === '') {
-					callback(new Error('请再次输入密码'));
+					callback(new Error('Please enter password again'));
 				} else if (value !== this.form.pass) {
-					callback(new Error('两次输入的密码不一致'));
+					callback(new Error('The two passwords are inconsistent'));
 				} else {
 					callback();
 				}
@@ -57,14 +65,15 @@
                     checkPass: [
                         { validator: validatePass2, trigger: 'blur' }
                     ]
-				}
+				},
+				visible: false
 			}
         },
         methods:{
         	onSubmit(formName) {
 				const self = this;
 				let formData = {
-					id: parseInt(sessionStorage.getItem('ms_userId')),
+					id: sessionStorage.getItem('ms_username'),
 					pass: self.form.pass,
 					checkPass: self.form.checkPass
 				};			

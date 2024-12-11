@@ -1,27 +1,21 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-title">登录管理系统</div>
+        <div class="ms-title">Dissertation Management System</div>
         <div class="ms-login">
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
                 <div v-if="errorInfo">
                     <span>{{errInfo}}</span>
                 </div>
                 <el-form-item prop="name">
-                    <el-input v-model="ruleForm.name" placeholder="账号" ></el-input>
+                    <el-input v-model="ruleForm.name" placeholder="Account" ></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input type="password" placeholder="密码" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
-                </el-form-item>
-                <el-form-item  prop="validate">
-                    <el-input v-model="ruleForm.validate" class="validate-code" placeholder="验证码" ></el-input>
-                    <div class="code" @click="refreshCode">
-                        <s-identify :identifyCode="identifyCode"></s-identify>
-                    </div>
+                    <el-input type="password" placeholder="Password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
                 </el-form-item>
                 <div class="login-btn">
-                    <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+                    <el-button type="primary" @click="submitForm('ruleForm')">Login</el-button>
                 </div>
-                <p class="register" @click="handleCommand()">注册</p>  
+                <p class="register" @click="handleCommand()">Register</p>  
             </el-form>
         </div>
     </div>    
@@ -37,25 +31,17 @@
                 errorInfo : false,
                 ruleForm: {
                     name: '',
-                    password: '',
-                    validate: ''                    
+                    password: ''                   
                 },
                 rules: {
                     name: [
-                        { required: true, message: '请输入用户名', trigger: 'blur' }
+                        { required: true, message: 'Please enter your account', trigger: 'blur' }
                     ],
                     password: [
-                        { required: true, message: '请输入密码', trigger: 'blur' }
-                    ],
-                    validate: [
-                        { required: true, message: '请输入验证码', trigger: 'blur' }
+                        { required: true, message: 'Please enter your password', trigger: 'blur' }
                     ]
                 }
             }
-        },
-        mounted() {
-            this.identifyCode = "";
-            this.makeCode(this.identifyCodes, 4);
         },
         methods: {
             submitForm(formName) {
@@ -68,12 +54,11 @@
                             console.log(response);
                             if (response.data == -1) {
                                 self.errorInfo = true;
-                                self.errInfo = '该用户不存在';
-                                console.log('该用户不存在')
+                                self.errInfo = 'The user does not exist';
+                                console.log('The user does not exist')
                             } else if (response.data == 0) {
-                                console.log('密码错误')
                                 self.errorInfo = true;
-                                self.errInfo = '密码错误';
+                                self.errInfo = 'Password error';
                             } else if (response.status == 200) {
                                 self.$router.push('/readme');
                                 sessionStorage.setItem('ms_username',self.ruleForm.name);
@@ -91,21 +76,6 @@
             },
             handleCommand() {
                 this.$router.push('/register');
-            },
-            randomNum(min, max) {
-                return Math.floor(Math.random() * (max - min) + min);
-            },
-            refreshCode() {
-                this.identifyCode = "";
-                this.makeCode(this.identifyCodes, 4);
-            },
-            makeCode(o, l) {
-                for (let i = 0; i < l; i++) {
-                    this.identifyCode += this.identifyCodes[
-                    this.randomNum(0, this.identifyCodes.length)
-                    ];
-                }
-                console.log(this.identifyCode);
             },
             debounce(func, delay) {
                 return function(args) {
@@ -129,12 +99,11 @@
                             console.log(response);
                             if (response.data == -1) {
                                 self.errorInfo = true;
-                                self.errInfo = '该用户不存在';
-                                console.log('该用户不存在')
+                                self.errInfo = 'The user does not exist';
+                                console.log('The user does not exist')
                             } else if (response.data == 0) {
-                                console.log('密码错误')
                                 self.errorInfo = true;
-                                self.errInfo = '密码错误';
+                                self.errInfo = 'Password error';
                             } else if (response.status == 200) {
                                 self.$router.push('/readme');
                             }                            
