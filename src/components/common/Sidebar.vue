@@ -103,16 +103,31 @@
                             ]
                             break;
                         case 'student':
-                        this.items = [
+                            this.items = [
+                                    {
+                                        icon: 'el-icon-setting',
+                                        index: 'reportSubmit',
+                                        title: 'Submit Report'
+                                    },
+                                    {
+                                        icon: 'el-icon-setting',
+                                        index: 'userCenter',
+                                        title: 'Configure',
+                                        subs: [
+                                            {
+                                                index: 'modifyPassword',
+                                                title: 'Modify Password'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            break;
+                        case 'admin':
+                            this.items = [
                                 {
                                     icon: 'el-icon-setting',
-                                    index: 'reportSubmit',
-                                    title: 'Submit Report'
-                                },
-                                {
-                                    icon: 'el-icon-setting',
-                                    index: 'Upload',
-                                    title: 'temp'
+                                    index: 'assignStudents',
+                                    title: 'Assign Students'
                                 },
                                 {
                                     icon: 'el-icon-setting',
@@ -126,8 +141,6 @@
                                     ]
                                 }
                             ]
-                            break;
-                        case 'admin':
                             break;
                     }
 				}).then(function(error) {

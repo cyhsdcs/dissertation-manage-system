@@ -216,4 +216,67 @@ router.post('/submitScores', (req, res) => {
 
 })
 
+router.post('/getAllStudent', (req, res) => {
+    var sql_student = $sql.user.select_student_by_account;
+    var params = req.body;
+    console.log('/getAllStudent', params);
+
+    conn.query(sql_student, {}, function(err, result) {
+        if (err) {
+            console.log(err);
+        }
+        console.log(result);
+        if (result[0] === undefined) {
+            res.send('-1')   //查询不出，data 返回-1
+        } else {
+            jsonWrite(res, result);
+        }
+    })
+})
+
+router.post('/getAllTeacher', (req, res) => {
+    var sql_teacher = $sql.user.select_teacher;
+    var params = req.body;
+    console.log('/getAllTeacher', params);
+
+    conn.query(sql_teacher, {}, function(err, result) {
+        if (err) {
+            console.log(err);
+        }
+        jsonWrite(res, result);
+    })
+})
+
+router.post('/assignStudent', (req, res) => {
+    var insert_assign_student = $sql.user.insert_assign_student;
+    var update_assign_student = $sql.user.update_assign_student;
+    var select_student_by_account = $sql.user.select_student_by_account;
+    var params = req.body;
+    console.log('/assignStudent', params);
+    select_student_by_account += " and user.account = '" + params.student_account + "'";
+    conn.query(select_student_by_account, {}, function(err, result) {
+        if (err) {
+            console.log(err);
+        }
+        console.log(result);
+        if (result === undefined || result[0] === undefined || result[0].teacher_account === null) {
+            console.log('insert');
+            conn.query(insert_assign_student, [params.teacher_account, params.student_account], function(err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                jsonWrite(res, result);
+            })
+        } else {
+            conn.query(update_assign_student, [params.teacher_account, params.student_account], function(err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                jsonWrite(res, result);
+            })
+        }
+    })
+    
+})
+
 module.exports = router;
