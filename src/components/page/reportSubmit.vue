@@ -6,29 +6,23 @@
             </el-breadcrumb>
         </div>
         <div>
-            <div class="content-title">Support drag and drop</div>
+            <div class="content-title">Progress Report</div>
             <el-upload
-            class="upload-demo"
-            drag
-            action="/api/posts/"
-            multiple>
-            <i class="el-icon-upload"></i>
-            <div class="el-upload__text">Drag and drop files here, or <em>click to upload</em></div>
-            <div class="el-upload__tip" slot="tip">Only pdf files are supported, and the file size cannot exceed 5mb
-                <br>
-                <br>
-            </div>
+                class="upload-demo"
+                drag
+                action="/api/posts/"
+                multiple>
+                <i class="el-icon-upload"></i>
+                <div class="el-upload__text">Drag and drop files here, or <em>click to upload</em></div>
+                <div class="el-upload__tip" slot="tip">Only pdf files are supported, and the file size cannot exceed 5mb
+                    <br>
+                    <br>
+                </div>
             </el-upload>
-            <vue-core-image-upload :class="['pure-button','pure-button-primary','js-btn-crop']"
-                               :crop="true"
-                               text="Upload"
-                               url="/api/posts/"
-                               extensions="png,gif,jpeg,jpg"
-                               @:imageuploaded="imageuploaded"
-                               @:errorhandle="handleError"></vue-core-image-upload>
         </div>
+        <br>
         <div>
-            <div class="content-title">Support drag and drop</div>
+            <div class="content-title">Final Report</div>
             <el-upload
             class="upload-demo"
             drag
@@ -41,13 +35,6 @@
                 <br>
             </div>
             </el-upload>
-            <vue-core-image-upload :class="['pure-button','pure-button-primary','js-btn-crop']"
-                               :crop="true"
-                               text="Upload"
-                               url="/api/posts/"
-                               extensions="png,gif,jpeg,jpg"
-                               @:imageuploaded="imageuploaded"
-                               @:errorhandle="handleError"></vue-core-image-upload>
         </div>
     </div>
 </template>
@@ -73,6 +60,9 @@
                     title: '上传失败',
                     message: '图片上传接口上传失败，可更改为自己的服务器接口'
                 });
+            },
+            submit(){
+                console.log('submit')
             }
         }
     }

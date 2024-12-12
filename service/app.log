@@ -1,305 +1,465 @@
-Wed, 11 Dec 2024 09:09:57 GMT body-parser deprecated undefined extended: provide extended option at app.js:9:20
+Thu, 12 Dec 2024 02:26:38 GMT body-parser deprecated undefined extended: provide extended option at app.js:9:20
 success listen at port: 3000
-{ id: 'teacher', pass: 'teacher1', checkPass: 'teacher1' }
+/getUser { name: 'admin' }
+/getAllStudent {}
+[
+  {
+    username: 'admin',
+    account: 'admin',
+    password: 'admin',
+    repeatPass: 'admin',
+    role: 'admin'
+  }
+]
+[
+  {
+    username: 'admin',
+    account: 'admin',
+    password: 'admin',
+    repeatPass: 'admin',
+    role: 'admin'
+  }
+]
+[
+  {
+    username: 'student1',
+    account: 'student1',
+    password: 'student1',
+    repeatPass: 'student1',
+    role: 'student',
+    teacher_account: 'teacher3',
+    student_account: 'student1'
+  },
+  {
+    username: 'student2',
+    account: 'student2',
+    password: 'student2',
+    repeatPass: 'student2',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student2'
+  },
+  {
+    username: 'student3',
+    account: 'student3',
+    password: 'student3',
+    repeatPass: 'student3',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student3'
+  },
+  {
+    username: 'student4',
+    account: 'student4',
+    password: 'student4',
+    repeatPass: 'student4',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student6',
+    account: 'student6',
+    password: 'student6',
+    repeatPass: 'student6',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student7',
+    account: 'student7',
+    password: 'student7',
+    repeatPass: 'student7',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student8',
+    account: 'student8',
+    password: 'student8',
+    repeatPass: 'student8',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student9',
+    account: 'student9',
+    password: 'student9',
+    repeatPass: 'student9',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  }
+]
+[
+  {
+    username: 'student1',
+    account: 'student1',
+    password: 'student1',
+    repeatPass: 'student1',
+    role: 'student',
+    teacher_account: 'teacher3',
+    student_account: 'student1'
+  },
+  {
+    username: 'student2',
+    account: 'student2',
+    password: 'student2',
+    repeatPass: 'student2',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student2'
+  },
+  {
+    username: 'student3',
+    account: 'student3',
+    password: 'student3',
+    repeatPass: 'student3',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student3'
+  },
+  {
+    username: 'student4',
+    account: 'student4',
+    password: 'student4',
+    repeatPass: 'student4',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student6',
+    account: 'student6',
+    password: 'student6',
+    repeatPass: 'student6',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student7',
+    account: 'student7',
+    password: 'student7',
+    repeatPass: 'student7',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student8',
+    account: 'student8',
+    password: 'student8',
+    repeatPass: 'student8',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student9',
+    account: 'student9',
+    password: 'student9',
+    repeatPass: 'student9',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  }
+]
+/getAllTeacher {}
+[
+  { username: 'teacher', account: 'teacher' },
+  { username: 'teacher1', account: 'teacher1' },
+  { username: 'teacher2', account: 'teacher2' },
+  { username: 'teacher3', account: 'teacher3' }
+]
+/getUser { name: null }
+[
+  {
+    username: 'admin',
+    account: 'admin',
+    password: 'admin',
+    repeatPass: 'admin',
+    role: 'admin'
+  },
+  {
+    username: 'teacher',
+    account: 'teacher',
+    password: 'teacher',
+    repeatPass: 'teacher',
+    role: 'teacher'
+  },
+  {
+    username: 'student1',
+    account: 'student1',
+    password: 'student1',
+    repeatPass: 'student1',
+    role: 'student'
+  },
+  {
+    username: 'student2',
+    account: 'student2',
+    password: 'student2',
+    repeatPass: 'student2',
+    role: 'student'
+  },
+  {
+    username: 'student3',
+    account: 'student3',
+    password: 'student3',
+    repeatPass: 'student3',
+    role: 'student'
+  },
+  {
+    username: 'student4',
+    account: 'student4',
+    password: 'student4',
+    repeatPass: 'student4',
+    role: 'student'
+  },
+  {
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student'
+  },
+  {
+    username: 'student6',
+    account: 'student6',
+    password: 'student6',
+    repeatPass: 'student6',
+    role: 'student'
+  },
+  {
+    username: 'student7',
+    account: 'student7',
+    password: 'student7',
+    repeatPass: 'student7',
+    role: 'student'
+  },
+  {
+    username: 'student8',
+    account: 'student8',
+    password: 'student8',
+    repeatPass: 'student8',
+    role: 'student'
+  },
+  {
+    username: 'student9',
+    account: 'student9',
+    password: 'student9',
+    repeatPass: 'student9',
+    role: 'student'
+  },
+  {
+    username: 'teacher1',
+    account: 'teacher1',
+    password: 'teacher1',
+    repeatPass: 'teacher1',
+    role: 'teacher'
+  },
+  {
+    username: 'teacher2',
+    account: 'teacher2',
+    password: 'teacher2',
+    repeatPass: 'teacher2',
+    role: 'teacher'
+  },
+  {
+    username: 'teacher3',
+    account: 'teacher3',
+    password: 'teacher3',
+    repeatPass: 'teacher3',
+    role: 'teacher'
+  }
+]
+[
+  {
+    username: 'admin',
+    account: 'admin',
+    password: 'admin',
+    repeatPass: 'admin',
+    role: 'admin'
+  },
+  {
+    username: 'teacher',
+    account: 'teacher',
+    password: 'teacher',
+    repeatPass: 'teacher',
+    role: 'teacher'
+  },
+  {
+    username: 'student1',
+    account: 'student1',
+    password: 'student1',
+    repeatPass: 'student1',
+    role: 'student'
+  },
+  {
+    username: 'student2',
+    account: 'student2',
+    password: 'student2',
+    repeatPass: 'student2',
+    role: 'student'
+  },
+  {
+    username: 'student3',
+    account: 'student3',
+    password: 'student3',
+    repeatPass: 'student3',
+    role: 'student'
+  },
+  {
+    username: 'student4',
+    account: 'student4',
+    password: 'student4',
+    repeatPass: 'student4',
+    role: 'student'
+  },
+  {
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student'
+  },
+  {
+    username: 'student6',
+    account: 'student6',
+    password: 'student6',
+    repeatPass: 'student6',
+    role: 'student'
+  },
+  {
+    username: 'student7',
+    account: 'student7',
+    password: 'student7',
+    repeatPass: 'student7',
+    role: 'student'
+  },
+  {
+    username: 'student8',
+    account: 'student8',
+    password: 'student8',
+    repeatPass: 'student8',
+    role: 'student'
+  },
+  {
+    username: 'student9',
+    account: 'student9',
+    password: 'student9',
+    repeatPass: 'student9',
+    role: 'student'
+  },
+  {
+    username: 'teacher1',
+    account: 'teacher1',
+    password: 'teacher1',
+    repeatPass: 'teacher1',
+    role: 'teacher'
+  },
+  {
+    username: 'teacher2',
+    account: 'teacher2',
+    password: 'teacher2',
+    repeatPass: 'teacher2',
+    role: 'teacher'
+  },
+  {
+    username: 'teacher3',
+    account: 'teacher3',
+    password: 'teacher3',
+    repeatPass: 'teacher3',
+    role: 'teacher'
+  }
+]
+/assignStudent { student_account: 'student5', teacher_account: 'teacher2' }
+[
+  {
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  }
+]
+insert
 ResultSetHeader {
   fieldCount: 0,
   affectedRows: 1,
   insertId: 0,
-  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
-  serverStatus: 34,
+  info: '',
+  serverStatus: 2,
   warningStatus: 0,
-  changedRows: 1
+  changedRows: 0
 }
-select * from user where username ='teacher'
-{
-  username: 'teacher',
-  account: 'teacher',
-  password: 'teacher1',
-  repeatPass: 'teacher1',
-  role: 'teacher'
-}
-{ name: 'teacher', password: 'teacher1' }
-teacher1
-teacher1
+/getAllTeacher {}
 [
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher1',
-    repeatPass: 'teacher1',
-    role: 'teacher'
-  }
+  { username: 'teacher', account: 'teacher' },
+  { username: 'teacher1', account: 'teacher1' },
+  { username: 'teacher2', account: 'teacher2' },
+  { username: 'teacher3', account: 'teacher3' }
 ]
-/getUser { name: 'teacher' }
+/getUser { name: 'teacher2' }
 [
   {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher1',
-    repeatPass: 'teacher1',
+    username: 'teacher2',
+    account: 'teacher2',
+    password: 'teacher2',
+    repeatPass: 'teacher2',
     role: 'teacher'
   }
 ]
 [
   {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher1',
-    repeatPass: 'teacher1',
+    username: 'teacher2',
+    account: 'teacher2',
+    password: 'teacher2',
+    repeatPass: 'teacher2',
     role: 'teacher'
   }
 ]
-{ id: 'teacher', pass: 'teacher', checkPass: 'teacher' }
-ResultSetHeader {
-  fieldCount: 0,
-  affectedRows: 1,
-  insertId: 0,
-  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
-  serverStatus: 34,
-  warningStatus: 0,
-  changedRows: 1
-}
-select * from user where username ='teacher'
-{
-  username: 'teacher',
-  account: 'teacher',
-  password: 'teacher',
-  repeatPass: 'teacher',
-  role: 'teacher'
-}
-{ name: 'teacher', password: 'teacher' }
-teacher
-teacher
+/getUser { name: 'admin' }
+/getAllStudent {}
 [
   {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
+    username: 'admin',
+    account: 'admin',
+    password: 'admin',
+    repeatPass: 'admin',
+    role: 'admin'
   }
 ]
 [
   {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-{ id: 'teacher', pass: 'teacher1', checkPass: 'teacher1' }
-ResultSetHeader {
-  fieldCount: 0,
-  affectedRows: 1,
-  insertId: 0,
-  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
-  serverStatus: 34,
-  warningStatus: 0,
-  changedRows: 1
-}
-select * from user where username ='teacher'
-{
-  username: 'teacher',
-  account: 'teacher',
-  password: 'teacher1',
-  repeatPass: 'teacher1',
-  role: 'teacher'
-}
-{ name: 'teacher', password: 'teacher1' }
-teacher1
-teacher1
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher1',
-    repeatPass: 'teacher1',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher1',
-    repeatPass: 'teacher1',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher1',
-    repeatPass: 'teacher1',
-    role: 'teacher'
-  }
-]
-{ id: 'teacher', pass: 'teacher', checkPass: 'teacher' }
-ResultSetHeader {
-  fieldCount: 0,
-  affectedRows: 1,
-  insertId: 0,
-  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
-  serverStatus: 34,
-  warningStatus: 0,
-  changedRows: 1
-}
-select * from user where username ='teacher'
-{
-  username: 'teacher',
-  account: 'teacher',
-  password: 'teacher',
-  repeatPass: 'teacher',
-  role: 'teacher'
-}
-{ name: 'teacher', password: 'teacher' }
-teacher
-teacher
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-select * from user where username ='student1'
-{
-  username: 'student1',
-  account: 'student1',
-  password: 'student1',
-  repeatPass: 'student1',
-  role: 'student'
-}
-{ name: 'student1', password: 'student1' }
-student1
-student1
-[
-  {
-    username: 'student1',
-    account: 'student1',
-    password: 'student1',
-    repeatPass: 'student1',
-    role: 'student'
-  }
-]
-/getUser { name: 'student1' }
-[
-  {
-    username: 'student1',
-    account: 'student1',
-    password: 'student1',
-    repeatPass: 'student1',
-    role: 'student'
+    username: 'admin',
+    account: 'admin',
+    password: 'admin',
+    repeatPass: 'admin',
+    role: 'admin'
   }
 ]
 [
@@ -308,165 +468,81 @@ student1
     account: 'student1',
     password: 'student1',
     repeatPass: 'student1',
-    role: 'student'
-  }
-]
-/getUser { name: 'student1' }
-[
-  {
-    username: 'student1',
-    account: 'student1',
-    password: 'student1',
-    repeatPass: 'student1',
-    role: 'student'
-  }
-]
-[
-  {
-    username: 'student1',
-    account: 'student1',
-    password: 'student1',
-    repeatPass: 'student1',
-    role: 'student'
-  }
-]
-select * from user where username ='teacher'
-{
-  username: 'teacher',
-  account: 'teacher',
-  password: 'teacher',
-  repeatPass: 'teacher',
-  role: 'teacher'
-}
-{ name: 'teacher', password: 'teacher' }
-teacher
-teacher
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getUser { name: 'teacher' }
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-[
-  {
-    username: 'teacher',
-    account: 'teacher',
-    password: 'teacher',
-    repeatPass: 'teacher',
-    role: 'teacher'
-  }
-]
-/getMyStudentList { account: 'teacher' }
-[
-  {
-    student_account: 'student1',
-    username: 'student1',
-    score_progress: '90',
-    score_final: '80'
+    role: 'student',
+    teacher_account: 'teacher3',
+    student_account: 'student1'
   },
   {
-    student_account: 'student2',
     username: 'student2',
-    score_progress: '85',
-    score_final: null
+    account: 'student2',
+    password: 'student2',
+    repeatPass: 'student2',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student2'
   },
   {
-    student_account: 'student3',
     username: 'student3',
-    score_progress: null,
-    score_final: null
-  }
-]
-[
-  {
-    student_account: 'student1',
-    username: 'student1',
-    score_progress: '90',
-    score_final: '80'
+    account: 'student3',
+    password: 'student3',
+    repeatPass: 'student3',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student3'
   },
   {
-    student_account: 'student2',
-    username: 'student2',
-    score_progress: '85',
-    score_final: null
+    username: 'student4',
+    account: 'student4',
+    password: 'student4',
+    repeatPass: 'student4',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
   },
   {
-    student_account: 'student3',
-    username: 'student3',
-    score_progress: null,
-    score_final: null
-  }
-]
-/getNotGraded { account: 'teacher' }
-[
-  {
-    student_account: 'student2',
-    username: 'student2',
-    score_progress: '85',
-    score_final: null
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student',
+    teacher_account: 'teacher2',
+    student_account: 'student5'
   },
   {
-    student_account: 'student3',
-    username: 'student3',
-    score_progress: null,
-    score_final: null
-  }
-]
-[
-  {
-    student_account: 'student2',
-    username: 'student2',
-    score_progress: '85',
-    score_final: null
+    username: 'student6',
+    account: 'student6',
+    password: 'student6',
+    repeatPass: 'student6',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
   },
   {
-    student_account: 'student3',
-    username: 'student3',
-    score_progress: null,
-    score_final: null
-  }
-]
-select * from user where username ='student1'
-{
-  username: 'student1',
-  account: 'student1',
-  password: 'student1',
-  repeatPass: 'student1',
-  role: 'student'
-}
-{ name: 'student1', password: 'student1' }
-student1
-student1
-[
+    username: 'student7',
+    account: 'student7',
+    password: 'student7',
+    repeatPass: 'student7',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
   {
-    username: 'student1',
-    account: 'student1',
-    password: 'student1',
-    repeatPass: 'student1',
-    role: 'student'
-  }
-]
-/getUser { name: 'student1' }
-[
+    username: 'student8',
+    account: 'student8',
+    password: 'student8',
+    repeatPass: 'student8',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
   {
-    username: 'student1',
-    account: 'student1',
-    password: 'student1',
-    repeatPass: 'student1',
-    role: 'student'
+    username: 'student9',
+    account: 'student9',
+    password: 'student9',
+    repeatPass: 'student9',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
   }
 ]
 [
@@ -475,6 +551,106 @@ student1
     account: 'student1',
     password: 'student1',
     repeatPass: 'student1',
-    role: 'student'
+    role: 'student',
+    teacher_account: 'teacher3',
+    student_account: 'student1'
+  },
+  {
+    username: 'student2',
+    account: 'student2',
+    password: 'student2',
+    repeatPass: 'student2',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student2'
+  },
+  {
+    username: 'student3',
+    account: 'student3',
+    password: 'student3',
+    repeatPass: 'student3',
+    role: 'student',
+    teacher_account: 'teacher',
+    student_account: 'student3'
+  },
+  {
+    username: 'student4',
+    account: 'student4',
+    password: 'student4',
+    repeatPass: 'student4',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student5',
+    account: 'student5',
+    password: 'student5',
+    repeatPass: 'student5',
+    role: 'student',
+    teacher_account: 'teacher2',
+    student_account: 'student5'
+  },
+  {
+    username: 'student6',
+    account: 'student6',
+    password: 'student6',
+    repeatPass: 'student6',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student7',
+    account: 'student7',
+    password: 'student7',
+    repeatPass: 'student7',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student8',
+    account: 'student8',
+    password: 'student8',
+    repeatPass: 'student8',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  },
+  {
+    username: 'student9',
+    account: 'student9',
+    password: 'student9',
+    repeatPass: 'student9',
+    role: 'student',
+    teacher_account: null,
+    student_account: null
+  }
+]
+/getAllTeacher {}
+[
+  { username: 'teacher', account: 'teacher' },
+  { username: 'teacher1', account: 'teacher1' },
+  { username: 'teacher2', account: 'teacher2' },
+  { username: 'teacher3', account: 'teacher3' }
+]
+/getUser { name: 'teacher2' }
+[
+  {
+    username: 'teacher2',
+    account: 'teacher2',
+    password: 'teacher2',
+    repeatPass: 'teacher2',
+    role: 'teacher'
+  }
+]
+[
+  {
+    username: 'teacher2',
+    account: 'teacher2',
+    password: 'teacher2',
+    repeatPass: 'teacher2',
+    role: 'teacher'
   }
 ]
