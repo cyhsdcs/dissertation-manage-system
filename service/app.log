@@ -186,6 +186,20 @@ success listen at port: 3000
     student_account: null
   }
 ]
+<<<<<<< HEAD
+select * from user where username ='teacher'
+{
+  username: 'teacher',
+  account: 'teacher',
+  password: 'teacher',
+  repeatPass: 'teacher',
+  role: 'teacher'
+}
+{ name: 'teacher', password: 'teacher' }
+teacher
+teacher
+[
+=======
 /getAllTeacher {}
 [
   { username: 'teacher', account: 'teacher' },
@@ -279,6 +293,7 @@ success listen at port: 3000
     repeatPass: 'teacher1',
     role: 'teacher'
   },
+>>>>>>> 0364f4519f55d2cf9ce2286be4ca8525226d30d4
   {
     username: 'teacher2',
     account: 'teacher2',
@@ -296,6 +311,8 @@ success listen at port: 3000
 ]
 [
   {
+<<<<<<< HEAD
+=======
     username: 'admin',
     account: 'admin',
     password: 'admin',
@@ -303,11 +320,39 @@ success listen at port: 3000
     role: 'admin'
   },
   {
+>>>>>>> 0364f4519f55d2cf9ce2286be4ca8525226d30d4
     username: 'teacher',
     account: 'teacher',
     password: 'teacher',
     repeatPass: 'teacher',
     role: 'teacher'
+<<<<<<< HEAD
+  }
+]
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: The client was disconnected by the server because of inactivity. See wait_timeout and interactive_timeout for configuring this behavior.
+    at Connection.protocolError (/root/dissertation-manage-system/node_modules/mysql2/lib/base/connection.js:407:17)
+    at Connection.handlePacket (/root/dissertation-manage-system/node_modules/mysql2/lib/base/connection.js:446:14)
+    at PacketParser.onPacket (/root/dissertation-manage-system/node_modules/mysql2/lib/base/connection.js:93:12)
+    at PacketParser.executeStart (/root/dissertation-manage-system/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/root/dissertation-manage-system/node_modules/mysql2/lib/base/connection.js:100:25)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+Emitted 'error' event on Connection instance at:
+    at Connection.protocolError (/root/dissertation-manage-system/node_modules/mysql2/lib/base/connection.js:410:10)
+    at Connection.handlePacket (/root/dissertation-manage-system/node_modules/mysql2/lib/base/connection.js:446:14)
+    [... lines matching original stack trace ...]
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+  fatal: true,
+  code: 4031
+}
+=======
   },
   {
     username: 'student1',
@@ -654,3 +699,4 @@ ResultSetHeader {
     role: 'teacher'
   }
 ]
+>>>>>>> 0364f4519f55d2cf9ce2286be4ca8525226d30d4
